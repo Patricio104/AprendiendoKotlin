@@ -1,12 +1,14 @@
 package com.patricio.aprendiendokotlin
 
+const val direccion = "24 de Abril"
 fun main(){
+    println(direccion)
+    println(Constantes.direccion)
 
-    val usuario = User("Patricio", 28)
-    val usuario2 = usuario.copy(edad=30)
-    println(usuario2.toString())
-
-    println("Son iguales ${usuario == usuario2}")
 }
 
-data class User( val nombre: String, val edad: Int)
+class Constantes {
+    companion object{
+        const val direccion = "25 de Abril"
+    }
+}
