@@ -1,14 +1,18 @@
 package com.patricio.aprendiendokotlin
 
-const val direccion = "24 de Abril"
+
 fun main(){
-    println(direccion)
-    println(Constantes.direccion)
-
+    val dia = DIAS.LUNES.numero
+    println(dia)
 }
 
-class Constantes {
-    companion object{
-        const val direccion = "25 de Abril"
-    }
+enum class DIAS(val numero: Int) {
+    LUNES(1),
+    MARTES(2),
+    MIERCOLES(3),
+    JUEVES(4),
+    VIERNES(5),
+    SABADO(6),
+    DOMINGO(7)
 }
+
