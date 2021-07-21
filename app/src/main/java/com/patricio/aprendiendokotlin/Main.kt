@@ -3,26 +3,15 @@ package com.patricio.aprendiendokotlin
 
 fun main(){
 
-    //while
+    //Extension functions
+    val nombre = "Patricio"
+    println(nombre.toLowerCase())
 
-    var i = 1
-    while(i<=5){
-        println("Valor $i")
-                ++i
-    }
-
-    var sum = 0
-    var input: String
-
-    do{
-        print("Ingresar un numero:")
-        input = readLine()!!
-        sum += input.toInt()
-    }while (input != "0")
-
-    println("Sum = $sum")
+    println("Remover primer caracter: ${nombre.removerPrimerYUltimoCaracter()}")
 
 }
+
+fun String.removerPrimerYUltimoCaracter(): String = this.substring(1, this.length-1)
 
 
 
