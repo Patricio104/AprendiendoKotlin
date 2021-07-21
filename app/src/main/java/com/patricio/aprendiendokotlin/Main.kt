@@ -3,22 +3,25 @@ package com.patricio.aprendiendokotlin
 
 fun main(){
 
-    //when equivalente a switch de java
-    val x =  4
-    when(x){
-        1 ->{
-            println("X es 1")
-        }
-        2 ->{
-            println("X es 2")
-        }
-        3 ->{
-            println("X es 3")
-        }
-        else ->{
-            println("X no corresponde a ninguna funcion declarada")
-        }
+    //while
+
+    var i = 1
+    while(i<=5){
+        println("Valor $i")
+                ++i
     }
+
+    var sum = 0
+    var input: String
+
+    do{
+        print("Ingresar un numero:")
+        input = readLine()!!
+        sum += input.toInt()
+    }while (input != "0")
+
+    println("Sum = $sum")
+
 }
 
 
