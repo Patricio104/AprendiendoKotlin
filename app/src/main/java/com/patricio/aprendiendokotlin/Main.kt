@@ -3,28 +3,22 @@ package com.patricio.aprendiendokotlin
 
 fun main(){
 
-    //Lista mutable, pueder ser modificada
-    var listaMutable = mutableListOf<String>("Patricio", "Gonzalo", "Benigno", "Santos")
-    //Lista inmutable, no puede ser modificada
-    var listaInmutable = listOf<String>("Bici", "Moto", "Auto")
-
-    for (nombre in listaMutable){
-        println(nombre)
+    //when equivalente a switch de java
+    val x =  4
+    when(x){
+        1 ->{
+            println("X es 1")
+        }
+        2 ->{
+            println("X es 2")
+        }
+        3 ->{
+            println("X es 3")
+        }
+        else ->{
+            println("X no corresponde a ninguna funcion declarada")
+        }
     }
-
-
-    for((index, value) in listaMutable.withIndex()){
-        println("Nombre : $value con indice: $index")
-    }
-
-    listaInmutable.forEach { elementos ->
-        println(elementos)
-    }
-
-    listaInmutable.forEachIndexed { index, elemento ->
-        println("Elemento : $elemento con indice: $index")
-    }
-
 }
 
 
